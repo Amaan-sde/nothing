@@ -13,7 +13,7 @@ RUN npm install --omit=dev
 COPY . .
 
 # Stage 2: Minimal Distroless runtime
-FROM gcr.io/distroless/nodejs20-debian12
+FROM gcr.io/distroless/nodejs20-debian12:debug
 
 ENV NODE_ENV=production
 WORKDIR /app
